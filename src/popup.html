@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <div class="brand">
+      <h2>Crypto <span>Live</span></h2>
+      <span class="live-dot" title="Precios en vivo"></span>
+    </div>
+    <div class="actions">
+      <button id="donate-btn" title="Donar">☕ Donar</button>
+      <button id="refresh-btn" title="Actualizar precios">↻</button>
+    </div>
+  </div>
 
+  <!-- Sección Fija / Monedas Guardadas -->
+  <div class="section-header">
+    <span class="section-title">Principales</span>
+    <span id="counter" class="counter">0/6</span>
+  </div>
+  <div id="main-cryptos" class="main-grid">
+    <div class="loading">Cargando mercado...</div>
+  </div>
+
+  <!-- Sección Buscador / Añadir -->
+  <div class="section-title" style="margin-top: 14px;">Buscar y Añadir</div>
+  <div class="search-box">
+    <input type="text" id="search-input" placeholder="Buscar (ej: PEPE, ADA, SOL)..." autocomplete="off">
+  </div>
+
+  <!-- Resultados de Búsqueda -->
+  <div id="search-results" class="results-list"></div>
+
+  <!-- Modal de Donaciones -->
+  <div id="donate-modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="close-modal" class="close-btn">✕</button>
+      <h3>Apoyá el proyecto ☕</h3>
+      <p class="network-badge">USDT (Red TRC20)</p>
+      
+      <div class="qr-container">
+        <img src="qr-usdt.png" alt="QR Wallet USDT" class="qr-image">
+      </div>
+
+      <div class="address-box">
+        <span id="wallet-address" class="address-text">TJtoHESYcGFpv2XnrnwoMjxX6xvEJJpYQg</span>
+      </div>
+
+      <button id="copy-btn" class="copy-btn">Copiar Dirección</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
